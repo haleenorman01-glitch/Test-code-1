@@ -1,1 +1,176 @@
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0d0d0d;
+    color: #ffffff;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px; 
+}
+
+/*To-Do Container */
+
+.todo-container {
+    width: 100%;
+    max-width: 600px;
+
+    background-color: #151515;
+
+    border: 1px solid #2f2f2f;
+    border-radius: 14px;
+
+    padding: 35px;
+
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+/*
+Title
+*/
+.todo-container h1 {
+    text-align: center;
+    
+    font-size: 32px;
+    font-weight: 600;
+
+    margin-bottom: 30px;
+
+    letter-spacing: -1px;
+}
+
+/*
+Input Area for To-Do List
+*/
+
+.todo-input {
+    display: flex;
+    gap: 10px;
+
+    margin-bottom: 25px;
+
+}
+
+.todo-input input {
+    flex: 1;
+
+    padding: 13px 15px;
+
+    font-size: 16px;
+    
+    outline: none;
+
+    transition: border-color 0.2s ease; 
+
+    border: 1px solid #333333;
+    border-radius: 8px;
+
+    background-color: #0d0d0d;
+    color: #ffffff;
+}
+
+.todo-input: :placeholder {
+    color: #777777;
+}
+
+.todo-input input:focus {
+    border-color: #ffffff;
+}
+
+/*
+Add Task Button
+*/
+
+.todo-input button {
+    background-color: #ffffff;
+    color: #000000;
+
+    border: none;
+    border-radius: 8px;
+
+    padding: 0 20px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.todo-input button:hover {
+    background-color: #000000;
+}
+
+.todo-input button:active {
+    transform: scale(0.97);
+}
+
+/* 
+Task List
+*/
+
+#taskList {
+
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+*/
+Individual Tasks
+*/
+
+#taskList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #1d1d1d;
+
+    border: 1px solid #2f2f2f;
+    border-radius: 8px;
+
+    padding: 14px 16px; 
+
+    color: #eeeeee;
+
+    transition: background-color 0.2s ease; 
+}
+
+#taskList li:hover {
+    background-color: #242424;
+}
+
+*/ style for Mobile */
+
+@media (max-width: 500px) {
+
+    .todo-container {
+        padding: 25px 20px;
+    }
+
+    .todo-container h1 {
+        font-size: 26px; 
+    }
+
+    .todo-input {
+        flex-direction: column;
+    }
+
+    .todo-input button {
+        padding: 12px;
+    }
+}
